@@ -8,8 +8,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "npx rollup -c",
-    "dev": "npx rollup -c -w",
-    "postinstall": "yarn build"
+    "dev": "npx rollup -c -w"
   },
   "engines": {
     "node": ">=6"
