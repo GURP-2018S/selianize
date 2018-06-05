@@ -6,8 +6,8 @@
   "main": "dist/selianize.cjs.js",
   "module": "dist/selianize.esm.js",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "build": "npx rollup -c",
+    "dev": "npx rollup -c -w",
     "postinstall": "yarn build"
   },
   "engines": {
