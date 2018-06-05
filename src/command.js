@@ -95,7 +95,12 @@ export function emit(command) {
     if (emitters[command.command]) {
       try {
         // Assertion Error 파트를 찾기 위함
-        let result = `\n// command_id: ${command.id}\n`;
+        let result = `\n
+        // command_id: ${command.id}
+        `;
+        if (command.comment) {
+          result += `// ${command.comment}\n`;
+        }
         result += await emitters[command.command](command.target, command.value);
         res(result);
       } catch (e) {
